@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>景区调查问卷</title>
+</head>
+<body>
+    
+    <h1>景区调查问卷</h1>
+    <hr/>
+
+    <form action="#" method="POST">
+        <h2>第一部分</h2>
+        <label>您认为哪个景区是最好玩儿的?</label><br>
+        <input type="text" name="best_scenery" required><br>
+
+        <label>您的旅游时间为?</label><br>
+        <input type="text" name="travel_time" required><br>
+
+        <label>您认为它好玩儿的原因是?</label><br>
+        <textarea name="fun_reason" rows="2" required></textarea><br>
+
+        <label>您认为该景区还需要改进的地方是?</label><br>
+        <textarea name="improvement" rows="2" required></textarea><br>
+
+        <label>您给它的评分是(0-10分):</label><br>
+        <input type="range" name="rating" min="0" max="10" step="1" value="5" oninput="this.nextElementSibling.value = this.value">
+        <output>5</output><br>
+        <hr/>
+        <h2>第二部分</h2>
+        <label>您认为不满意的景区是?</label><br>
+        <input type="text" name="unsatisfied_scenery" required><br>
+
+        <label>该景区的哪些地方您感觉不满意?</label><br>
+        <textarea name="unsatisfied_reason" rows="2" required></textarea><br>
+
+        <label>您给它的评分是(10分为满分):</label><br>
+        <input type="number" name="unsatisfied_rating" min="1" max="10" required><br>
+
+        <h2>第三部分</h2>
+        <label>您的姓名:</label><br>
+        <input type="text" name="胡耀荣" required><br>
+
+        <label>您最喜欢的颜色:</label><br>
+        <input type="text" name="favorite_color" required><br>
+
+        <label>出生年月日 (yyyy/m/d):</label><br>
+        <input type="date" name="birthdate" required><br>
+
+        <label>电话号码:</label><br>
+        <input type="tel" name="phone" required><br>
+
+        <label>电子邮箱地址:</label><br>
+        <input type="email" name="1596359180@qq.com" required><br>
+
+        <label>个人网站网址:</label><br>
+        <input type="url" name="www.hyr.com" required><br>
+
+        <input type="submit" value="提交">
+        <footer>
+            <div >
+                <p>班级:计算机233班</p>
+                <p>学号:202310244308</p>
+                <p>姓名: 胡耀荣</p>
+            </div>
+        </footer>
+        
+    </form>
+
+    
+</body>
+</html>
 
