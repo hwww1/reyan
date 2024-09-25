@@ -20,6 +20,11 @@
                 question4.style.display = 'block';
             }
         }
+
+        function showThankYou() {
+            alert("谢谢您的提交！");
+            return true; // 继续提交表单
+        }
     </script>
 </head>
 <body>
@@ -27,7 +32,7 @@
     <h1>景区调查问卷</h1>
     <hr/>
 
-    <form action="#" method="POST">
+    <form action="#" method="POST" onsubmit="return showThankYou();">
         <h2>第一部分</h2>
         <label>您认为哪个景区是最好玩儿的?</label><br>
         <input type="text" name="best_scenery" required><br>
