@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>景区调查问卷</title>
+    <script>
+        function toggleQuestions() {
+            const question1 = document.getElementById('question1');
+            const question2 = document.getElementById('question2');
+            const question3 = document.getElementById('question3');
+            const question4 = document.getElementById('question4');
+
+            if (question1.checked) {
+                question2.style.display = 'none';
+                question3.style.display = 'block';
+                question4.style.display = 'none';
+            } else {
+                question2.style.display = 'block';
+                question3.style.display = 'none';
+                question4.style.display = 'block';
+            }
+        }
+    </script>
 </head>
 <body>
     
@@ -37,9 +55,28 @@
         <label>您给它的评分是(10分为满分):</label><br>
         <input type="number" name="unsatisfied_rating" min="1" max="10" required><br>
 
+        <h2>额外问题</h2>
+        <label>问题一: 您是否希望分享更多关于您的旅行经验?</label><br>
+        <input type="checkbox" id="question1" name="share_experience" onclick="toggleQuestions()"> 是<br>
+
+        <div id="question2" style="display: block;">
+            <label>问题二: 如果您选择不分享，您能否告诉我们原因?</label><br>
+            <textarea name="reason_not_sharing" rows="2"></textarea><br>
+        </div>
+
+        <div id="question3" style="display: none;">
+            <label>问题三: 您还有其他想说的意见或建议?</label><br>
+            <textarea name="additional_comments" rows="2"></textarea><br>
+        </div>
+
+        <div id="question4" style="display: block;">
+            <label>问题四: 您认为未来的旅游趋势会是什么样的?</label><br>
+            <textarea name="future_trends" rows="2"></textarea><br>
+        </div>
+
         <h2>第三部分</h2>
         <label>您的姓名:</label><br>
-        <input type="text" name="胡耀荣" required><br>
+        <input type="text" name="name" required><br>
 
         <label>您最喜欢的颜色:</label><br>
         <input type="text" name="favorite_color" required><br>
@@ -51,14 +88,14 @@
         <input type="tel" name="phone" required><br>
 
         <label>电子邮箱地址:</label><br>
-        <input type="email" name="1596359180@qq.com" required><br>
+        <input type="email" name="email" required><br>
 
         <label>个人网站网址:</label><br>
-        <input type="url" name="www.hyr.com" required><br>
+        <input type="url" name="website" required><br>
 
         <input type="submit" value="提交">
         <footer>
-            <div >
+            <div>
                 <p>班级:计算机233班</p>
                 <p>学号:202310244308</p>
                 <p>姓名: 胡耀荣</p>
@@ -67,7 +104,5 @@
         
     </form>
 
-    
 </body>
 </html>
-
